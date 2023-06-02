@@ -1,5 +1,7 @@
 package common;
 
+import java.util.Properties;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -15,5 +17,12 @@ public class JsonUtils {
 		 Object result = resultObj.get(key);
 		 return result;
 	}
+	public String readJsonFile(String jsonFileName, String configFileName) {
+		Properties prop = Utils.loadConfigFile(configFileName);
+		String jsonFilePath = prop.getProperty("LikeOrDislikeBreedApiPath")+ configFileName;
+		
+		//đọc file
+		
+		}
 
 }
